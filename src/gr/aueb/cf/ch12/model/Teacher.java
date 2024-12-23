@@ -1,39 +1,18 @@
-package gr.aueb.cf.ch12;
-/**
- * Data class
- * POJO (Plain Old Java Object)
- *  Java Bean
- * Encapsulation applied
- *
- * Alt + Insert! for auto
- */
-public class Student {
-    private static  int studentsCount;
+package gr.aueb.cf.ch12.model;
 
-    private int id;
+public class Teacher {
+    private int id ;
     private String firstname;
     private String lastname;
 
+    public Teacher(){
 
-    static {
-        studentsCount = 0;
     }
 
-    // Default Constructor
-    public Student() {
-        studentsCount++;
-    }
-
-    // Overloaded Constructor
-    public Student(int id, String firstname , String lastname){
+    public Teacher(int id, String firstname, String lastname){
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
-        studentsCount++;
-    }
-
-    public static int getStudentsCount(){
-        return studentsCount;
     }
 
     public int getId() {
@@ -60,4 +39,5 @@ public class Student {
         this.lastname = lastname;
     }
 }
+
 
